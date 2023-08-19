@@ -7,57 +7,59 @@ import org.springframework.stereotype.Component;
 @Component
 public class DatabaseLoader implements CommandLineRunner {
 
-	private final InstrumentoRepository repositoryI;
-	private final MusicoRepository repositoryM;
-	private final BandaRepository repositoryB;
-	private final IntegranteRepository repositoryN;
+	private final PuestoRepository repositoryP;
+	private final PersonaRepository repositoryR;
+	private final DepartamentoRepository repositoryD;
+	private final EmpleadoRepository repositoryE;
 
 	@Autowired
 	public DatabaseLoader(
-		InstrumentoRepository repositoryI,
-		MusicoRepository repositoryM,
-		BandaRepository repositoryB,
-		IntegranteRepository repositoryN
+		PuestoRepository repositoryP,
+		PersonaRepository repositoryR,
+		DepartamentoRepository repositoryD,
+		EmpleadoRepository repositoryE
 		) {
-		this.repositoryI = repositoryI;
-		this.repositoryM = repositoryM;
-		this.repositoryB = repositoryB;
-		this.repositoryN = repositoryN;
+		this.repositoryP = repositoryP;
+		this.repositoryR = repositoryR;
+		this.repositoryD = repositoryD;
+		this.repositoryE = repositoryE;
 	}
 
 	@Override
 	public void run(String... strings) throws Exception {
 		
-		Instrumento iVoz = new Instrumento("Voz", "Viento", "Voz humana");
-		Instrumento iGuitarrElectrica = new Instrumento("Guitarra Eléctrica", "Eléctrica", "de madera, SIN caja de resonancia, 6 cuerdas templadas metálicas, pastillas y amplificador");
-		Instrumento iBajo = new Instrumento("Bajo", "Eléctrico", "Ritmos");
-		this.repositoryI.save(new Instrumento("Guitarra Acústica", "Cuerda", "de madera, con caja de resonancia, 6 cuerdas templadas"));
-		this.repositoryI.save(new Instrumento("Ukelele","Cuerda","de madera, con caja de resonancia pequeña, 4 cuerdas templadas"));
-		this.repositoryI.save(new Instrumento("Melódica","Viento","teclado pequeño de 2 octavas, sonorizado por soplido"));
-		this.repositoryI.save(new Instrumento("Batería", "Percusión", "Percisiones"));
-		this.repositoryI.save(iVoz);
-		this.repositoryI.save(iGuitarrElectrica);
-		this.repositoryI.save(iBajo);
+		Puesto iDirector = new Puesto("Director", "Encargado de dirigir el Departamento");
+		Puesto iAnalista = new Puesto( "Analista", "Encargado de analizar el Mercado");
+		Puesto iPracticante = new Puesto("Practicante", "Persona nueva en el Departamentoo");
 
-		Musico mFreddie = new Musico("Freddie");
-		Musico mBrian = new Musico("Brian");
-		Musico mRogerWaters = new Musico("Roger Waters");
-		this.repositoryM.save(mFreddie);
-		this.repositoryM.save(mBrian);
-		this.repositoryM.save(mRogerWaters);
-		this.repositoryM.save(new Musico("Roger Taylor"));
+		this.repositoryP.save(new Puesto("Soporte Tecnico", "Encargado de resolver cualquier problema tecnologico"));
+		this.repositoryP.save(new Puesto("Coordinador","Encargado de Coordinar reuniones"));
+		this.repositoryP.save(new Puesto("Sub Director","Encargado de dirigir el Departamento en caso no este el Director"));
+		this.repositoryP.save(new Puesto("Especialista de Calidad", "Responsable de garantizar que los procesos cumplan con los estandares establecidos"));
+		this.repositoryP.save(iDirector);
+		this.repositoryP.save(iAnalista);
+		this.repositoryP.save(iPracticante);
 
-		Banda bQueen = new Banda("Queen");
-		Banda bPinkFloyd = new Banda("Pink Floyd");
-		this.repositoryB.save(bQueen);
-		this.repositoryB.save(bPinkFloyd);
+		Persona pJuan = new Persona("Juan");
+		Persona pPedro = new Persona("Pedro");
+		Persona pJulio = new Persona("Julio");
+		this.repositoryR.save(pJuan);
+		this.repositoryR.save(pPedro);
+		this.repositoryR.save(pJulio);
+		this.repositoryR.save(new Persona("Pedro"));
 
-		Integrante intFreddie = new Integrante(bQueen, mFreddie, iVoz);
-		this.repositoryN.save(intFreddie);
-		Integrante intBrian = new Integrante(bQueen, mBrian, iGuitarrElectrica);
-		this.repositoryN.save(intBrian);
-		Integrante intRogerWaters = new Integrante(bPinkFloyd, mRogerWaters, iBajo);
-		this.repositoryN.save(intRogerWaters);
+		Departamento dContabilidad = new Departamento("Contabilidad");
+		Departamento dRRHH = new Departamento("Recursos Humanos");
+		Departamento dMarketing = new Departamento("dMarketing");
+		this.repositoryD.save(dContabilidad);
+		this.repositoryD.save(dRRHH);
+		this.repositoryD.save(dMarketing);
 
+		Empleado empJuan = new Empleado(dContabilidad, pJuan, iPracticante);
+		Empleado empPedro = new Empleado(dRRHH, pPedro, iAnalista);
+		Empleado empJulio = new Empleado(dMarketing, pJulio, iDirector);
+		this.repositoryE.save(empJuan);
+		this.repositoryE.save(empPedro);	
+		this.repositoryE.save(empJulio);
 	}
 }

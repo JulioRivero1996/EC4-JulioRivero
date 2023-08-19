@@ -1,23 +1,22 @@
-@server = https://cautious-capybara-pj7q4qw6rvj3gr9-8080.app.github.dev
-@instrumentos = {{server}}/api/instrumentos
-@musicos = {{server}}/api/musicos
+@server = https://bookish-space-system-ww7pvx9x7gq25969-8080.app.github.dev
+@puestos = {{server}}/api/puestos
+@personas = {{server}}/api/personas
 ###
-GET {{instrumentos}}
+GET {{puestos}}
 ###
-POST {{instrumentos}}
+POST {{puestos}}
 Content-Type: application/json
 
 {
-  "nombre" : "Quena",
-  "categoria" : "Instrumento de viento",
-  "descripcion" : "tubo con orificios que al taparlos hacen sonar diferentes notas"
+  "nombre" : "Prueba",
+  "descripcion" : "Prueba"
 }
 ###
-GET {{musicos}}
+GET {{personas}}
 ###
-GET {{musicos}}/1
+GET {{personas}}/1
 ###
-PATCH {{musicos}}/1
+PATCH {{personas}}/1
 Content-Type: application/json
 
 {

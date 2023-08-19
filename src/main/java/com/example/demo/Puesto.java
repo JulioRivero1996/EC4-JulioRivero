@@ -7,18 +7,16 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
 @Entity
-public class Instrumento {
+public class Puesto {
 
-	private @Id @GeneratedValue Long id;
+    private @Id @GeneratedValue Long id;
 	private String nombre;
-	private String categoria;
 	private String descripcion;
 
-	private Instrumento() {}
+	private Puesto() {}
 
-	public Instrumento(String nombre, String categoria, String descripcion) {
+	public Puesto(String nombre, String descripcion) {
 		this.nombre = nombre;
-		this.categoria = categoria;
 		this.descripcion = descripcion;
 	}
 
@@ -26,25 +24,23 @@ public class Instrumento {
 	public boolean equals(Object o) {
 		if (this == o) return true;
 		if (o == null || getClass() != o.getClass()) return false;
-		Instrumento instrumento = (Instrumento) o;
-		return Objects.equals(id, instrumento.id) &&
-			Objects.equals(nombre, instrumento.nombre) &&
-			Objects.equals(categoria, instrumento.categoria) &&
-			Objects.equals(descripcion, instrumento.descripcion);
+		Puesto puesto = (Puesto) o;
+		return Objects.equals(id, puesto.id) &&
+			Objects.equals(nombre, puesto.nombre) &&
+			Objects.equals(descripcion, puesto.descripcion);
 	}
 
 	@Override
 	public int hashCode() {
 
-		return Objects.hash(id, nombre, categoria, descripcion);
+		return Objects.hash(id, nombre, descripcion);
 	}
 
 	@Override
 	public String toString() {
-		return "Instrumento{" +
+		return "Puesto{" +
 			"id=" + id +
 			", nombre='" + nombre + '\'' +
-			", categoria='" + categoria + '\'' +
 			", descripcion='" + descripcion + '\'' +
 			'}';
 	}
@@ -65,14 +61,6 @@ public class Instrumento {
 		this.nombre = nombre;
 	}
 
-	public String getCategoria() {
-		return categoria;
-	}
-
-	public void setCategoria(String categoria) {
-		this.categoria = categoria;
-	}
-
 	public String getDescripcion() {
 		return descripcion;
 	}
@@ -80,9 +68,4 @@ public class Instrumento {
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
-
-	
-
-	
-
 }

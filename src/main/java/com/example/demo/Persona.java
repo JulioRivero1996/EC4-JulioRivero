@@ -7,14 +7,14 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
 @Entity
-public class Banda {
+public class Persona {
 
-	private @Id @GeneratedValue Long id;
+    private @Id @GeneratedValue Long id;
 	private String nombre;
 
-	private Banda() {}
+	private Persona() {}
 
-	public Banda(String nombre) {
+	public Persona(String nombre) {
 		this.nombre = nombre;
 	}
 
@@ -22,9 +22,9 @@ public class Banda {
 	public boolean equals(Object o) {
 		if (this == o) return true;
 		if (o == null || getClass() != o.getClass()) return false;
-		Banda oo = (Banda) o;
-		return Objects.equals(id, oo.id) &&
-			Objects.equals(nombre, oo.nombre);
+		Persona persona = (Persona) o;
+		return Objects.equals(id, persona.id) &&
+			Objects.equals(nombre, persona.nombre);
 	}
 
 	@Override
@@ -35,9 +35,9 @@ public class Banda {
 
 	@Override
 	public String toString() {
-	 	return "Banda{" +
-	 		"id=" + id +
-	 		", nombre='" + nombre + '\'' +
+		return "Puesto{" +
+			"id=" + id +
+			", nombre='" + nombre + '\'' +
 			'}';
 	}
 
@@ -56,6 +56,5 @@ public class Banda {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-
-
+    
 }
