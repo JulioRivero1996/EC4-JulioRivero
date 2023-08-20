@@ -21,32 +21,46 @@ class PageHome extends React.Component {
 	render() {
 		return (
 			<>
-                <h1>EC4 - Julio Rivero</h1>
+				<h1>EC4 - Julio Rivero</h1>
 
-				<div style={{"width": "100%", "display": "flex"}}>
-					<div style={{"width":"calc(100%/3"}}>
-						<Titulo entidad="Puestos" />
-						<PuestoList puestos={this.state.puestos} />
-						<br />
-						<Link to="/nuevo-puesto">Nuevo Puesto</Link>
+				<div id='Contenedor' style={{ width: '50%', margin: '0 auto', display: 'flex', flexDirection: 'column' }}>
+					<div style={{ width: '100%' }}>
+					<Titulo entidad="Puestos" />
+					<PuestoList puestos={this.state.puestos} />
+					<br />
+					<Link to="/nuevo-puesto">
+						<button className="btn btn-success">
+						Nuevo Puesto
+						</button>
+					</Link>
 					</div>
-					
-					<div style={{"width":"calc(100%/3"}}>
+
+					<div style={{ width: '100%', display: 'flex' }}>
+					<div style={{ width: '50%' }}>
 						<Titulo entidad="Personas" />
 						<PersonaList personas={this.state.personas} />
 						<br />
-						<Link to="/nueva-persona">Nueva Persona</Link>
+						<Link to="/nueva-persona">
+						<button className="btn btn-success">
+							Nuevo Persona
+						</button>
+						</Link>
 					</div>
 
-					<div style={{"width":"calc(100%/3"}}>
+					<div style={{ width: '50%' }}>
 						<Titulo entidad="Departamentos" />
 						<DepartamentoList departamentos={this.state.departamentos} />
 						<br />
-						<Link to="/nuevo-departamento">Nuevo Departamento</Link>
-					</div>				
+						<Link to="/nuevo-departamento">
+						<button className="btn btn-success">
+							Nuevo Departamento
+						</button>
+						</Link>
+					</div>
+					</div>
 				</div>
-				
 			</>
+
 		)
 	}
 }
@@ -70,11 +84,11 @@ class PuestoList extends React.Component {
 		);
 		return (
 			<table border="1">
-				<tbody>
+				<tbody style={{ backgroundColor: 'white' }}>
 					<tr>
-						<th>Nombre</th>
-						<th>Descripción</th>
-						<th>Acciones</th>
+						<th style={{ color: 'white', backgroundColor: 'black' }}>Nombre</th>
+						<th style={{ color: 'white', backgroundColor: 'black' }}>Descripción</th>
+						<th style={{ color: 'white', backgroundColor: 'black' }}>Acciones</th>
 					</tr>
 					{puestos}
 				</tbody>
@@ -88,11 +102,11 @@ class PersonaList extends React.Component {
 			<Persona key={persona._links.self.href} persona={persona} />
 		);
 		return (
-			<table border="1">
-				<tbody>
+			<table border="1" >
+				<tbody style={{ backgroundColor: 'white' }}>
 					<tr>
-						<th>Nombre</th>
-						<th>Acciones</th>
+						<th style={{ color: 'white', backgroundColor: 'black' }}>Nombre</th>
+						<th style={{ color: 'white', backgroundColor: 'black' }}>Acciones</th>
 					</tr>
 					{personas}
 				</tbody>
@@ -108,10 +122,10 @@ class DepartamentoList extends React.Component {
 		);
 		return (
 			<table border="1">
-				<tbody>
+				<tbody style={{ backgroundColor: 'white' }}>
 					<tr>
-						<th>Nombre</th>
-						<th>Acciones</th>
+						<th style={{ color: 'white', backgroundColor: 'black' }}>Nombre</th>
+						<th style={{ color: 'white', backgroundColor: 'black' }}>Acciones</th>
 					</tr>
 					{departamentos}
 				</tbody>
@@ -128,7 +142,9 @@ class Puesto extends React.Component {
 				<td>{this.props.puesto.nombre}</td>
 				<td>{this.props.puesto.descripcion}</td>
 				<td>
-					<Link to={'/editar-puesto/'+id}>Editar</Link>
+					<Link to={'/editar-puesto/'+id}>
+						<button className="btn btn-warning">Editar</button>
+					</Link>
 				</td>
 			</tr>
 		)
@@ -141,7 +157,9 @@ class Persona extends React.Component {
 			<tr>
 				<td>{this.props.persona.nombre}</td>
 				<td>
-					<Link to={`/editar-persona/${id}`}>Editar</Link>
+					<Link to={`/editar-persona/${id}`}>
+						<button className="btn btn-warning">Editar</button>
+					</Link>
 				</td>
 			</tr>
 		)
@@ -154,8 +172,10 @@ class Departamento extends React.Component {
 		return (
 			<tr>
 				<td>{this.props.departamento.nombre}</td>
-				<td>
-					<Link to={`/ver-departamento/${id}`}>Ver</Link>
+				<td style={{ textAlign: 'center' }}>
+					<Link to={`/ver-departamento/${id}`}>
+						<button className="btn btn-warning">Ver</button>
+					</Link>
 				</td>
 			</tr>
 		)

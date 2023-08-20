@@ -41112,13 +41112,16 @@ var PageHome = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h1", null, "EC4 - Julio Rivero"), /*#__PURE__*/React.createElement("div", {
+        id: "Contenedor",
         style: {
-          "width": "100%",
-          "display": "flex"
+          width: '50%',
+          margin: '0 auto',
+          display: 'flex',
+          flexDirection: 'column'
         }
       }, /*#__PURE__*/React.createElement("div", {
         style: {
-          "width": "calc(100%/3"
+          width: '100%'
         }
       }, /*#__PURE__*/React.createElement(Titulo, {
         entidad: "Puestos"
@@ -41126,9 +41129,16 @@ var PageHome = /*#__PURE__*/function (_React$Component) {
         puestos: this.state.puestos
       }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(Link, {
         to: "/nuevo-puesto"
-      }, "Nuevo Puesto")), /*#__PURE__*/React.createElement("div", {
+      }, /*#__PURE__*/React.createElement("button", {
+        className: "btn btn-success"
+      }, "Nuevo Puesto"))), /*#__PURE__*/React.createElement("div", {
         style: {
-          "width": "calc(100%/3"
+          width: '100%',
+          display: 'flex'
+        }
+      }, /*#__PURE__*/React.createElement("div", {
+        style: {
+          width: '50%'
         }
       }, /*#__PURE__*/React.createElement(Titulo, {
         entidad: "Personas"
@@ -41136,9 +41146,11 @@ var PageHome = /*#__PURE__*/function (_React$Component) {
         personas: this.state.personas
       }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(Link, {
         to: "/nueva-persona"
-      }, "Nueva Persona")), /*#__PURE__*/React.createElement("div", {
+      }, /*#__PURE__*/React.createElement("button", {
+        className: "btn btn-success"
+      }, "Nuevo Persona"))), /*#__PURE__*/React.createElement("div", {
         style: {
-          "width": "calc(100%/3"
+          width: '50%'
         }
       }, /*#__PURE__*/React.createElement(Titulo, {
         entidad: "Departamentos"
@@ -41146,7 +41158,9 @@ var PageHome = /*#__PURE__*/function (_React$Component) {
         departamentos: this.state.departamentos
       }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(Link, {
         to: "/nuevo-departamento"
-      }, "Nuevo Departamento"))));
+      }, /*#__PURE__*/React.createElement("button", {
+        className: "btn btn-success"
+      }, "Nuevo Departamento"))))));
     }
   }]);
   return PageHome;
@@ -41172,7 +41186,26 @@ var PuestoList = /*#__PURE__*/function (_React$Component2) {
       });
       return /*#__PURE__*/React.createElement("table", {
         border: "1"
-      }, /*#__PURE__*/React.createElement("tbody", null, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", null, "Nombre"), /*#__PURE__*/React.createElement("th", null, "Descripci\xF3n"), /*#__PURE__*/React.createElement("th", null, "Acciones")), puestos));
+      }, /*#__PURE__*/React.createElement("tbody", {
+        style: {
+          backgroundColor: 'white'
+        }
+      }, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", {
+        style: {
+          color: 'white',
+          backgroundColor: 'black'
+        }
+      }, "Nombre"), /*#__PURE__*/React.createElement("th", {
+        style: {
+          color: 'white',
+          backgroundColor: 'black'
+        }
+      }, "Descripci\xF3n"), /*#__PURE__*/React.createElement("th", {
+        style: {
+          color: 'white',
+          backgroundColor: 'black'
+        }
+      }, "Acciones")), puestos));
     }
   }]);
   return PuestoList;
@@ -41195,7 +41228,21 @@ var PersonaList = /*#__PURE__*/function (_React$Component3) {
       });
       return /*#__PURE__*/React.createElement("table", {
         border: "1"
-      }, /*#__PURE__*/React.createElement("tbody", null, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", null, "Nombre"), /*#__PURE__*/React.createElement("th", null, "Acciones")), personas));
+      }, /*#__PURE__*/React.createElement("tbody", {
+        style: {
+          backgroundColor: 'white'
+        }
+      }, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", {
+        style: {
+          color: 'white',
+          backgroundColor: 'black'
+        }
+      }, "Nombre"), /*#__PURE__*/React.createElement("th", {
+        style: {
+          color: 'white',
+          backgroundColor: 'black'
+        }
+      }, "Acciones")), personas));
     }
   }]);
   return PersonaList;
@@ -41218,7 +41265,21 @@ var DepartamentoList = /*#__PURE__*/function (_React$Component4) {
       });
       return /*#__PURE__*/React.createElement("table", {
         border: "1"
-      }, /*#__PURE__*/React.createElement("tbody", null, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", null, "Nombre"), /*#__PURE__*/React.createElement("th", null, "Acciones")), departamentos));
+      }, /*#__PURE__*/React.createElement("tbody", {
+        style: {
+          backgroundColor: 'white'
+        }
+      }, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", {
+        style: {
+          color: 'white',
+          backgroundColor: 'black'
+        }
+      }, "Nombre"), /*#__PURE__*/React.createElement("th", {
+        style: {
+          color: 'white',
+          backgroundColor: 'black'
+        }
+      }, "Acciones")), departamentos));
     }
   }]);
   return DepartamentoList;
@@ -41236,7 +41297,9 @@ var Puesto = /*#__PURE__*/function (_React$Component5) {
       var id = this.props.puesto._links.self.href.split('/').slice(-1);
       return /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("td", null, this.props.puesto.nombre), /*#__PURE__*/React.createElement("td", null, this.props.puesto.descripcion), /*#__PURE__*/React.createElement("td", null, /*#__PURE__*/React.createElement(Link, {
         to: '/editar-puesto/' + id
-      }, "Editar")));
+      }, /*#__PURE__*/React.createElement("button", {
+        className: "btn btn-warning"
+      }, "Editar"))));
     }
   }]);
   return Puesto;
@@ -41254,7 +41317,9 @@ var Persona = /*#__PURE__*/function (_React$Component6) {
       var id = this.props.persona._links.self.href.split("/").slice(-1);
       return /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("td", null, this.props.persona.nombre), /*#__PURE__*/React.createElement("td", null, /*#__PURE__*/React.createElement(Link, {
         to: "/editar-persona/".concat(id)
-      }, "Editar")));
+      }, /*#__PURE__*/React.createElement("button", {
+        className: "btn btn-warning"
+      }, "Editar"))));
     }
   }]);
   return Persona;
@@ -41270,9 +41335,15 @@ var Departamento = /*#__PURE__*/function (_React$Component7) {
     key: "render",
     value: function render() {
       var id = this.props.departamento._links.self.href.split("/").slice(-1);
-      return /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("td", null, this.props.departamento.nombre), /*#__PURE__*/React.createElement("td", null, /*#__PURE__*/React.createElement(Link, {
+      return /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("td", null, this.props.departamento.nombre), /*#__PURE__*/React.createElement("td", {
+        style: {
+          textAlign: 'center'
+        }
+      }, /*#__PURE__*/React.createElement(Link, {
         to: "/ver-departamento/".concat(id)
-      }, "Ver")));
+      }, /*#__PURE__*/React.createElement("button", {
+        className: "btn btn-warning"
+      }, "Ver"))));
     }
   }]);
   return Departamento;
