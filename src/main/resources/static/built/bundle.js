@@ -40820,11 +40820,11 @@ var router = createBrowserRouter([{
   path: '/nuevo-departamento',
   element: /*#__PURE__*/React.createElement(PageNuevoDepartamento, null)
 }, {
-  path: '/ver-departento/:id/nuevo-empleado',
-  element: /*#__PURE__*/React.createElement(PageNuevoEmpleado, null)
-}, {
   path: '/ver-departamento/:id',
   element: /*#__PURE__*/React.createElement(PageVerDepartamento, null)
+}, {
+  path: '/ver-departamento/:id/nuevo-empleado',
+  element: /*#__PURE__*/React.createElement(PageNuevoEmpleado, null)
 }, {
   path: '/editar-persona/:id',
   element: /*#__PURE__*/React.createElement(PageEditarPersona, null)

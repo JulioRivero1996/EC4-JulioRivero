@@ -18,8 +18,8 @@ const router = createBrowserRouter([
 	{ path: '/nueva-persona', element: <PageNuevaPersona /> },
 	{ path: '/nuevo-puesto', element: <PageNuevoPuesto /> },
 	{ path: '/nuevo-departamento', element: <PageNuevoDepartamento /> },
-	{ path: '/ver-departento/:id/nuevo-empleado', element: <PageNuevoEmpleado /> },
 	{ path: '/ver-departamento/:id', element: <PageVerDepartamento /> },
+	{ path: '/ver-departamento/:id/nuevo-empleado', element: <PageNuevoEmpleado /> },
 	{ path: '/editar-persona/:id', element: <PageEditarPersona /> },
 	{ path: '/editar-puesto/:id', element: <PageEditarPuesto /> }
 	
