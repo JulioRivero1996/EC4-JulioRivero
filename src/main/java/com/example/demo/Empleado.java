@@ -26,14 +26,13 @@ public class Empleado {
 	public Empleado() {
 	}
 
-    public Empleado(Departamento departamento, Persona persona, Puesto puesto) {
+	public Empleado(Departamento departamento, Persona persona, Puesto puesto) {
         this.departamento = departamento;
         this.persona = persona;
         this.puesto = puesto;
+    }
 
-	}
-
-	public Long getId() {
+    public Long getId() {
 		return id;
 	}
 
@@ -65,6 +64,4 @@ public class Empleado {
         this.puesto = puesto;
     }
 
-    
-    
 }

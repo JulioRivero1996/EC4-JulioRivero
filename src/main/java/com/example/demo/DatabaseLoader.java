@@ -50,7 +50,7 @@ public class DatabaseLoader implements CommandLineRunner {
 
 		Departamento dContabilidad = new Departamento("Contabilidad");
 		Departamento dRRHH = new Departamento("Recursos Humanos");
-		Departamento dMarketing = new Departamento("dMarketing");
+		Departamento dMarketing = new Departamento("Marketing");
 		this.repositoryD.save(dContabilidad);
 		this.repositoryD.save(dRRHH);
 		this.repositoryD.save(dMarketing);
