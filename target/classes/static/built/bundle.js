@@ -41347,9 +41347,59 @@ module.exports = PageNuevaPersona;
   !*** ./src/main/js/pages/nuevo-departamento.js ***!
   \*************************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i["return"] && (_r = _i["return"](), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var _require = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js"),
+  Link = _require.Link;
+var client = __webpack_require__(/*! ../client */ "./src/main/js/client.js");
+var _require2 = __webpack_require__(/*! react */ "./node_modules/react/index.js"),
+  useState = _require2.useState;
+function PageNuevoDepartamento() {
+  var _useState = useState(""),
+    _useState2 = _slicedToArray(_useState, 2),
+    nombre = _useState2[0],
+    setNombre = _useState2[1];
+  var handleSubmit = function handleSubmit(event) {
+    event.preventDefault();
+    client({
+      method: 'POST',
+      path: '/api/departamentos',
+      entity: {
+        nombre: nombre
+      },
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }).done(function () {
+      return window.location = "/";
+    });
+  };
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h1", null, "Nuevo Departamento"), /*#__PURE__*/React.createElement("form", {
+    onSubmit: handleSubmit
+  }, /*#__PURE__*/React.createElement("label", {
+    htmlFor: "nombre"
+  }, "Nombre"), /*#__PURE__*/React.createElement("input", {
+    type: "text",
+    id: "nombre",
+    name: "nombre",
+    onChange: function onChange(e) {
+      return setNombre(e.target.value);
+    }
+  }), /*#__PURE__*/React.createElement("input", {
+    type: "submit",
+    value: "Nuevo Departamento"
+  })), /*#__PURE__*/React.createElement("hr", null), /*#__PURE__*/React.createElement(Link, {
+    to: "/"
+  }, "Volver"));
+}
+module.exports = PageNuevoDepartamento;
 
 /***/ }),
 
@@ -41358,9 +41408,120 @@ module.exports = PageNuevaPersona;
   !*** ./src/main/js/pages/nuevo-empleado.js ***!
   \*********************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i["return"] && (_r = _i["return"](), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var _require = __webpack_require__(/*! react */ "./node_modules/react/index.js"),
+  useState = _require.useState,
+  useEffect = _require.useEffect;
+var _require2 = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js"),
+  Link = _require2.Link,
+  useParams = _require2.useParams;
+var client = __webpack_require__(/*! ../client */ "./src/main/js/client.js");
+var NuevoEmpleadoPage = function NuevoEmpleadoPage() {
+  var _useParams = useParams(),
+    id = _useParams.id;
+  var _useState = useState([]),
+    _useState2 = _slicedToArray(_useState, 2),
+    personas = _useState2[0],
+    setPersonas = _useState2[1];
+  var _useState3 = useState([]),
+    _useState4 = _slicedToArray(_useState3, 2),
+    puestos = _useState4[0],
+    setPuestos = _useState4[1];
+  var _useState5 = useState(''),
+    _useState6 = _slicedToArray(_useState5, 2),
+    idPersona = _useState6[0],
+    setIdPersona = _useState6[1];
+  var _useState7 = useState(''),
+    _useState8 = _slicedToArray(_useState7, 2),
+    idPuesto = _useState8[0],
+    setIdPuesto = _useState8[1];
+  var handleSubmit = function handleSubmit(evento) {
+    evento.preventDefault();
+    client({
+      method: 'POST',
+      path: '/api/empleados',
+      entity: {
+        departamento: 'http://localhost:8080/api/departamentos/' + id,
+        persona: 'http://localhost:8080/api/personas/' + idPersona,
+        puesto: 'http://localhost:8080/api/puestos/' + idPuesto
+      },
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }).done(function () {
+      window.location = '/';
+    });
+  };
+  useEffect(function () {
+    client({
+      method: 'GET',
+      path: '/api/personas'
+    }).done(function (response) {
+      var personas2 = [];
+      response.entity._embedded.personas.map(function (persona) {
+        personas2.push({
+          value: persona._links.self.href.split('/').slice(-1),
+          label: persona.nombre
+        });
+      });
+      setPersonas(personas2);
+    });
+    client({
+      method: 'GET',
+      path: '/api/puestos'
+    }).done(function (response) {
+      var puestos2 = [];
+      response.entity._embedded.puestos.map(function (puesto) {
+        puestos2.push({
+          value: puesto._links.self.href.split('/').slice(-1),
+          label: puesto.nombre
+        });
+      });
+      setPuestos(puestos2);
+    });
+  }, []);
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h1", null, "Nuevo Empleado"), /*#__PURE__*/React.createElement("form", {
+    onSubmit: handleSubmit
+  }, /*#__PURE__*/React.createElement("label", {
+    htmlFor: "persona"
+  }, "Persona"), /*#__PURE__*/React.createElement("select", {
+    name: "persona",
+    id: "persona",
+    onChange: function onChange(e) {
+      setIdPersona(e.target.value);
+    }
+  }, personas.map(function (persona) {
+    return /*#__PURE__*/React.createElement("option", {
+      key: persona.value,
+      value: persona.value
+    }, persona.label);
+  })), /*#__PURE__*/React.createElement("label", null, "Puesto"), /*#__PURE__*/React.createElement("select", {
+    name: "puesto",
+    id: "puesto",
+    onChange: function onChange(e) {
+      setIdPuesto(e.target.value);
+    }
+  }, puestos.map(function (puesto) {
+    return /*#__PURE__*/React.createElement("option", {
+      key: puesto.value,
+      value: puesto.value
+    }, puesto.label);
+  })), /*#__PURE__*/React.createElement("input", {
+    type: "submit",
+    value: "Nuevo Empleado"
+  })), /*#__PURE__*/React.createElement(Link, {
+    to: "/"
+  }, "Volver"));
+};
+module.exports = NuevoEmpleadoPage;
 
 /***/ }),
 
@@ -41444,9 +41605,66 @@ module.exports = PageNuevoPuesto;
   !*** ./src/main/js/pages/ver-departamento.js ***!
   \***********************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i["return"] && (_r = _i["return"](), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var _require = __webpack_require__(/*! react */ "./node_modules/react/index.js"),
+  useState = _require.useState,
+  useEffect = _require.useEffect;
+var _require2 = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js"),
+  useParams = _require2.useParams;
+var client = __webpack_require__(/*! ../client */ "./src/main/js/client.js");
+var _require3 = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/dist/index.js"),
+  Link = _require3.Link;
+var VerDepartamentoPage = function VerDepartamentoPage() {
+  var _useParams = useParams(),
+    id = _useParams.id;
+  var _useState = useState({}),
+    _useState2 = _slicedToArray(_useState, 2),
+    departamento = _useState2[0],
+    setDepartamento = _useState2[1];
+  var _useState3 = useState([]),
+    _useState4 = _slicedToArray(_useState3, 2),
+    empleados = _useState4[0],
+    setEmpleados = _useState4[1];
+  useEffect(function () {
+    var url_departamento = '/api/departamentos/' + id;
+    client({
+      method: 'GET',
+      path: url_departamento
+    }).done(function (response) {
+      setDepartamento(response.entity);
+    });
+    client({
+      method: 'GET',
+      path: url_departamento + '/formacion'
+    }).done(function (response) {
+      setEmpleados(response.entity);
+    });
+  }, []);
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h1", null, "Ver Departamento"), /*#__PURE__*/React.createElement("table", {
+    border: "1"
+  }, /*#__PURE__*/React.createElement("tbody", null, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", null, "Nombre"), /*#__PURE__*/React.createElement("td", null, departamento.nombre)))), /*#__PURE__*/React.createElement("hr", null), /*#__PURE__*/React.createElement("table", {
+    border: "1"
+  }, /*#__PURE__*/React.createElement("thead", null, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", {
+    colSpan: "2"
+  }, "Empleados")), /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", null, "Persona"), /*#__PURE__*/React.createElement("th", null, "Puesto"))), /*#__PURE__*/React.createElement("tbody", null, empleados.map(function (empleado) {
+    return /*#__PURE__*/React.createElement("tr", {
+      key: empleado.ID
+    }, /*#__PURE__*/React.createElement("td", null, empleado.PERSONA), /*#__PURE__*/React.createElement("td", null, empleado.PUESTO));
+  }))), /*#__PURE__*/React.createElement(Link, {
+    to: "/ver-departamento/".concat(id, "/nuevo-empleado")
+  }, "Nuevo Empleado"), " | ", /*#__PURE__*/React.createElement(Link, {
+    to: "/"
+  }, "Volver"));
+};
+module.exports = VerDepartamentoPage;
 
 /***/ }),
 
