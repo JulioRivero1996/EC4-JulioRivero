@@ -30,13 +30,21 @@ function PageEditarPersona() {
     return (
         <>
             <h1>Editar Persona</h1>
-            <form onSubmit={handleSubmit}>
-                <label htmlFor="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" value={persona.nombre} onChange={(e) => setPersona({...persona, nombre: e.target.value })} />
-                <input type="submit" value="Editar Persona" />
-            </form>
-            <hr />
-            <Link to="/">Volver</Link>
+            <div id='Contenedor' style={{ width: '50%', margin: '0 auto'}}>
+                <hr />
+                <form onSubmit={handleSubmit}>
+                    <label htmlFor="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" value={persona.nombre} onChange={(e) => setPersona({...persona, nombre: e.target.value })} />
+                    <br/>
+                    <input type="submit" value="Editar Persona" className="btn btn-success" />
+                </form>
+                <hr />
+                <Link to="/">
+                    <button className="btn btn-success">
+                         Volver
+                    </button>
+                </Link>
+            </div>
         </>
     );
 }

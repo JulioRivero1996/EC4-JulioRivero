@@ -21,13 +21,21 @@ function PageNuevaPersona() {
     return (
         <>
             <h1>Nueva Persona</h1>
-            <form onSubmit={handleSubmit}>
-                <label htmlFor="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" onChange={(e)=>setNombre(e.target.value)} />
-                <input type="submit" value="Nueva Persona" />
-            </form>
-            <hr />
-            <Link to="/">Volver</Link>
+            <div id='Contenedor' style={{ width: '50%', margin: '0 auto'}}>
+                <hr/>
+                <form onSubmit={handleSubmit}>                 
+                    <label htmlFor="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" onChange={(e)=>setNombre(e.target.value)} />
+                    <br/>
+                    <input type="submit" value="Nueva Persona" className="btn btn-success"/>
+                </form>
+                <hr/>           
+                <Link to="/">
+                    <button className="btn btn-success">
+                        Volver
+                    </button>
+                </Link>
+            </div>
         </>
     );
 }

@@ -43,11 +43,15 @@ public class DatabaseLoader implements CommandLineRunner {
 		Persona pJuan = new Persona("Juan");
 		Persona pPedro = new Persona("Pedro");
 		Persona pJulio = new Persona("Julio");
+		Persona P004 = new Persona("Pablo");
+		Persona P005 = new Persona("Luis");
+		Persona P006 = new Persona("Messi");
 		this.repositoryR.save(pJuan);
 		this.repositoryR.save(pPedro);
 		this.repositoryR.save(pJulio);
-		this.repositoryR.save(new Persona("Pedro"));
-
+		this.repositoryR.save(P004);
+		this.repositoryR.save(P005);
+		this.repositoryR.save(P006);
 		Departamento dContabilidad = new Departamento("Contabilidad");
 		Departamento dRRHH = new Departamento("Recursos Humanos");
 		Departamento dMarketing = new Departamento("Marketing");

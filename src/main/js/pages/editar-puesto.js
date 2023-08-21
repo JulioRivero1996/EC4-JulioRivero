@@ -31,18 +31,24 @@ const EditarPuestoPage = () => {
     return (
         <>
             <h1>Editar Puesto</h1>
-            <form onSubmit={handleSubmit}>
-
-                <label htmlFor="nombre">Nombre</label>
-                <input type='text' id='nombre' name='nombre' value={puesto.nombre} onChange={(e)=>setPuesto({...puesto, nombre: e.target.value })}/>
-        
-                <label htmlFor="descripcion">Descripción</label>
-                <input type='text' id='descripcion' name='descripcion' value={puesto.descripcion} onChange={(e)=>setPuesto({...puesto, descripcion: e.target.value })}/>
-
-                <input type='submit' value="Editar Puesto"></input>
-                <Link to="/">Volver</Link>
-            </form>
-            <hr></hr>
+            <div id='Contenedor' style={{ width: '50%', margin: '0 auto'}}>
+                <hr/>
+                <form onSubmit={handleSubmit}>
+                    <label htmlFor="nombre">Nombre</label>
+                    <input type='text' id='nombre' name='nombre' value={puesto.nombre} onChange={(e)=>setPuesto({...puesto, nombre: e.target.value })}/>
+                    <br/>
+                    <label htmlFor="descripcion">Descripción</label>
+                    <input type='text' id='descripcion' name='descripcion' value={puesto.descripcion} onChange={(e)=>setPuesto({...puesto, descripcion: e.target.value })} style={{ width: '300px' }}/>
+                    <br/>
+                    <input type='submit' value="Editar Puesto" className="btn btn-success"></input>         
+                </form>
+                <hr/>
+                <Link to="/">
+                    <button className="btn btn-success">
+                        Volver
+                    </button>
+                </Link>
+            </div>
         </>
     );
 }

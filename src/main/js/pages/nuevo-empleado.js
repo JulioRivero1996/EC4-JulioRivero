@@ -54,30 +54,38 @@ const NuevoEmpleadoPage = () => {
     return (
         <>
             <h1>Nuevo Empleado</h1>
-            <form onSubmit={handleSubmit}>
 
-                <label htmlFor='persona'>Persona</label>
-                <select name="persona" id="persona" onChange={(e)=>{setIdPersona(e.target.value)}}>
-                    {personas.map(persona => {	
-                        return (
-                            <option key={persona.value} value={persona.value}>{persona.label}</option>
-                        )
-                    })}
-                </select>
-                
-                <label>Puesto</label>
-                <select name="puesto" id="puesto" onChange={(e)=>{setIdPuesto(e.target.value)}}>
-                    {puestos.map(puesto => {	
-                        return (
-                            <option key={puesto.value} value={puesto.value}>{puesto.label}</option>
-                        )
-                    })}
-                </select>
+            <div id='Contenedor' style={{ width: '50%', margin: '0 auto'}}>
+                <hr/>
+                <form onSubmit={handleSubmit}>
 
-                <input type="submit" value="Nuevo Empleado" />
-
-            </form>
-            <Link to="/">Volver</Link>
+                    <label htmlFor='persona'>Persona</label>
+                    <select name="persona" id="persona" onChange={(e)=>{setIdPersona(e.target.value)}}>
+                        {personas.map(persona => {	
+                            return (
+                                <option key={persona.value} value={persona.value}>{persona.label}</option>
+                            )
+                        })}
+                    </select>
+                    <br/>
+                    <label>Puesto</label>
+                    <select name="puesto" id="puesto" onChange={(e)=>{setIdPuesto(e.target.value)}}>
+                        {puestos.map(puesto => {	
+                            return (
+                                <option key={puesto.value} value={puesto.value}>{puesto.label}</option>
+                            )
+                        })}
+                    </select>
+                    <br/>      
+                    <input type="submit" value="Nuevo Empleado" className="btn btn-success"/>
+                </form>
+                <hr/>
+                <Link to="/">
+                    <button className="btn btn-success">
+                        Volver
+                    </button>
+                </Link>
+            </div>
         </>
     )
 }

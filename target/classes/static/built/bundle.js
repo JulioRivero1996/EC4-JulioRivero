@@ -40924,7 +40924,13 @@ function PageEditarPersona() {
       return window.location = "/";
     });
   };
-  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h1", null, "Editar Persona"), /*#__PURE__*/React.createElement("form", {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h1", null, "Editar Persona"), /*#__PURE__*/React.createElement("div", {
+    id: "Contenedor",
+    style: {
+      width: '50%',
+      margin: '0 auto'
+    }
+  }, /*#__PURE__*/React.createElement("hr", null), /*#__PURE__*/React.createElement("form", {
     onSubmit: handleSubmit
   }, /*#__PURE__*/React.createElement("label", {
     htmlFor: "nombre"
@@ -40938,12 +40944,15 @@ function PageEditarPersona() {
         nombre: e.target.value
       }));
     }
-  }), /*#__PURE__*/React.createElement("input", {
+  }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("input", {
     type: "submit",
-    value: "Editar Persona"
+    value: "Editar Persona",
+    className: "btn btn-success"
   })), /*#__PURE__*/React.createElement("hr", null), /*#__PURE__*/React.createElement(Link, {
     to: "/"
-  }, "Volver"));
+  }, /*#__PURE__*/React.createElement("button", {
+    className: "btn btn-success"
+  }, "Volver"))));
 }
 module.exports = PageEditarPersona;
 
@@ -41004,7 +41013,13 @@ var EditarPuestoPage = function EditarPuestoPage() {
       return window.location = "/";
     });
   };
-  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h1", null, "Editar Puesto"), /*#__PURE__*/React.createElement("form", {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h1", null, "Editar Puesto"), /*#__PURE__*/React.createElement("div", {
+    id: "Contenedor",
+    style: {
+      width: '50%',
+      margin: '0 auto'
+    }
+  }, /*#__PURE__*/React.createElement("hr", null), /*#__PURE__*/React.createElement("form", {
     onSubmit: handleSubmit
   }, /*#__PURE__*/React.createElement("label", {
     htmlFor: "nombre"
@@ -41018,7 +41033,7 @@ var EditarPuestoPage = function EditarPuestoPage() {
         nombre: e.target.value
       }));
     }
-  }), /*#__PURE__*/React.createElement("label", {
+  }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("label", {
     htmlFor: "descripcion"
   }, "Descripci\xF3n"), /*#__PURE__*/React.createElement("input", {
     type: "text",
@@ -41029,13 +41044,19 @@ var EditarPuestoPage = function EditarPuestoPage() {
       return setPuesto(_objectSpread(_objectSpread({}, puesto), {}, {
         descripcion: e.target.value
       }));
+    },
+    style: {
+      width: '300px'
     }
-  }), /*#__PURE__*/React.createElement("input", {
+  }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("input", {
     type: "submit",
-    value: "Editar Puesto"
-  }), /*#__PURE__*/React.createElement(Link, {
+    value: "Editar Puesto",
+    className: "btn btn-success"
+  })), /*#__PURE__*/React.createElement("hr", null), /*#__PURE__*/React.createElement(Link, {
     to: "/"
-  }, "Volver")), /*#__PURE__*/React.createElement("hr", null));
+  }, /*#__PURE__*/React.createElement("button", {
+    className: "btn btn-success"
+  }, "Volver"))));
 };
 module.exports = EditarPuestoPage;
 
@@ -41134,7 +41155,8 @@ var PageHome = /*#__PURE__*/function (_React$Component) {
       }, "Nuevo Puesto"))), /*#__PURE__*/React.createElement("div", {
         style: {
           width: '100%',
-          display: 'flex'
+          display: 'flex',
+          paddingBottom: '50px'
         }
       }, /*#__PURE__*/React.createElement("div", {
         style: {
@@ -41391,7 +41413,13 @@ function PageNuevaPersona() {
       return window.location = "/";
     });
   };
-  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h1", null, "Nueva Persona"), /*#__PURE__*/React.createElement("form", {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h1", null, "Nueva Persona"), /*#__PURE__*/React.createElement("div", {
+    id: "Contenedor",
+    style: {
+      width: '50%',
+      margin: '0 auto'
+    }
+  }, /*#__PURE__*/React.createElement("hr", null), /*#__PURE__*/React.createElement("form", {
     onSubmit: handleSubmit
   }, /*#__PURE__*/React.createElement("label", {
     htmlFor: "nombre"
@@ -41402,12 +41430,15 @@ function PageNuevaPersona() {
     onChange: function onChange(e) {
       return setNombre(e.target.value);
     }
-  }), /*#__PURE__*/React.createElement("input", {
+  }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("input", {
     type: "submit",
-    value: "Nueva Persona"
+    value: "Nueva Persona",
+    className: "btn btn-success"
   })), /*#__PURE__*/React.createElement("hr", null), /*#__PURE__*/React.createElement(Link, {
     to: "/"
-  }, "Volver"));
+  }, /*#__PURE__*/React.createElement("button", {
+    className: "btn btn-success"
+  }, "Volver"))));
 }
 module.exports = PageNuevaPersona;
 
@@ -41452,7 +41483,13 @@ function PageNuevoDepartamento() {
       return window.location = "/";
     });
   };
-  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h1", null, "Nuevo Departamento"), /*#__PURE__*/React.createElement("form", {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h1", null, "Nuevo Departamento"), /*#__PURE__*/React.createElement("div", {
+    id: "Contenedor",
+    style: {
+      width: '50%',
+      margin: '0 auto'
+    }
+  }, /*#__PURE__*/React.createElement("hr", null), /*#__PURE__*/React.createElement("form", {
     onSubmit: handleSubmit
   }, /*#__PURE__*/React.createElement("label", {
     htmlFor: "nombre"
@@ -41463,12 +41500,15 @@ function PageNuevoDepartamento() {
     onChange: function onChange(e) {
       return setNombre(e.target.value);
     }
-  }), /*#__PURE__*/React.createElement("input", {
+  }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("input", {
     type: "submit",
-    value: "Nuevo Departamento"
+    value: "Nuevo Departamento",
+    className: "btn btn-success"
   })), /*#__PURE__*/React.createElement("hr", null), /*#__PURE__*/React.createElement(Link, {
     to: "/"
-  }, "Volver"));
+  }, /*#__PURE__*/React.createElement("button", {
+    className: "btn btn-success"
+  }, "Volver"))));
 }
 module.exports = PageNuevoDepartamento;
 
@@ -41559,7 +41599,13 @@ var NuevoEmpleadoPage = function NuevoEmpleadoPage() {
       setPuestos(puestos2);
     });
   }, []);
-  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h1", null, "Nuevo Empleado"), /*#__PURE__*/React.createElement("form", {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h1", null, "Nuevo Empleado"), /*#__PURE__*/React.createElement("div", {
+    id: "Contenedor",
+    style: {
+      width: '50%',
+      margin: '0 auto'
+    }
+  }, /*#__PURE__*/React.createElement("hr", null), /*#__PURE__*/React.createElement("form", {
     onSubmit: handleSubmit
   }, /*#__PURE__*/React.createElement("label", {
     htmlFor: "persona"
@@ -41574,7 +41620,7 @@ var NuevoEmpleadoPage = function NuevoEmpleadoPage() {
       key: persona.value,
       value: persona.value
     }, persona.label);
-  })), /*#__PURE__*/React.createElement("label", null, "Puesto"), /*#__PURE__*/React.createElement("select", {
+  })), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("label", null, "Puesto"), /*#__PURE__*/React.createElement("select", {
     name: "puesto",
     id: "puesto",
     onChange: function onChange(e) {
@@ -41585,12 +41631,15 @@ var NuevoEmpleadoPage = function NuevoEmpleadoPage() {
       key: puesto.value,
       value: puesto.value
     }, puesto.label);
-  })), /*#__PURE__*/React.createElement("input", {
+  })), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("input", {
     type: "submit",
-    value: "Nuevo Empleado"
-  })), /*#__PURE__*/React.createElement(Link, {
+    value: "Nuevo Empleado",
+    className: "btn btn-success"
+  })), /*#__PURE__*/React.createElement("hr", null), /*#__PURE__*/React.createElement(Link, {
     to: "/"
-  }, "Volver"));
+  }, /*#__PURE__*/React.createElement("button", {
+    className: "btn btn-success"
+  }, "Volver"))));
 };
 module.exports = NuevoEmpleadoPage;
 
@@ -41640,32 +41689,41 @@ function PageNuevoPuesto() {
       return window.location = "/";
     });
   };
-  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h1", null, "Nuevo Puesto"), /*#__PURE__*/React.createElement("form", {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h1", null, "Nuevo Puesto"), /*#__PURE__*/React.createElement("div", {
+    id: "Contenedor",
+    style: {
+      width: '50%',
+      margin: '0 auto'
+    }
+  }, /*#__PURE__*/React.createElement("hr", null), /*#__PURE__*/React.createElement("form", {
     onSubmit: handleSubmit
   }, /*#__PURE__*/React.createElement("label", {
     htmlFor: "nombre"
-  }, "Nombre"), /*#__PURE__*/React.createElement("input", {
+  }, "Nombre: "), /*#__PURE__*/React.createElement("input", {
     type: "text",
     id: "nombre",
     name: "nombre",
     onChange: function onChange(e) {
       return setNombre(e.target.value);
     }
-  }), /*#__PURE__*/React.createElement("label", {
+  }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("label", {
     htmlFor: "descripcion"
-  }, "Descripci\xF3n"), /*#__PURE__*/React.createElement("input", {
+  }, "Descripci\xF3n: "), /*#__PURE__*/React.createElement("input", {
     type: "text",
     id: "descripcion",
     name: "descripcion",
     onChange: function onChange(e) {
       return setDescripcion(e.target.value);
     }
-  }), /*#__PURE__*/React.createElement("input", {
+  }), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("input", {
     type: "submit",
-    value: "Nuevo Puesto"
+    value: "Nuevo Puesto",
+    className: "btn btn-success"
   })), /*#__PURE__*/React.createElement("hr", null), /*#__PURE__*/React.createElement(Link, {
     to: "/"
-  }, "Volver"));
+  }, /*#__PURE__*/React.createElement("button", {
+    className: "btn btn-success"
+  }, "Volver"))));
 }
 module.exports = PageNuevoPuesto;
 
@@ -41719,21 +41777,49 @@ var VerDepartamentoPage = function VerDepartamentoPage() {
       setEmpleados(response.entity);
     });
   }, []);
-  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h1", null, "Ver Departamento"), /*#__PURE__*/React.createElement("table", {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h1", null, "Ver Departamento"), /*#__PURE__*/React.createElement("div", {
+    id: "Contenedor",
+    style: {
+      width: '50%',
+      margin: '0 auto'
+    }
+  }, /*#__PURE__*/React.createElement("hr", null), /*#__PURE__*/React.createElement("table", {
     border: "1"
-  }, /*#__PURE__*/React.createElement("tbody", null, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", null, "Nombre"), /*#__PURE__*/React.createElement("td", null, departamento.nombre)))), /*#__PURE__*/React.createElement("hr", null), /*#__PURE__*/React.createElement("table", {
+  }, /*#__PURE__*/React.createElement("tbody", {
+    style: {
+      backgroundColor: 'white'
+    }
+  }, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", {
+    style: {
+      color: 'white',
+      backgroundColor: 'black'
+    }
+  }, "Nombre"), /*#__PURE__*/React.createElement("td", null, departamento.nombre)))), /*#__PURE__*/React.createElement("hr", null), /*#__PURE__*/React.createElement("table", {
     border: "1"
-  }, /*#__PURE__*/React.createElement("thead", null, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", {
+  }, /*#__PURE__*/React.createElement("thead", {
+    style: {
+      color: 'white',
+      backgroundColor: 'black'
+    }
+  }, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", {
     colSpan: "2"
-  }, "Empleados")), /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", null, "Persona"), /*#__PURE__*/React.createElement("th", null, "Puesto"))), /*#__PURE__*/React.createElement("tbody", null, empleados.map(function (empleado) {
+  }, "Empleados")), /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", null, "Persona"), /*#__PURE__*/React.createElement("th", null, "Puesto"))), /*#__PURE__*/React.createElement("tbody", {
+    style: {
+      backgroundColor: 'white'
+    }
+  }, empleados.map(function (empleado) {
     return /*#__PURE__*/React.createElement("tr", {
       key: empleado.ID
     }, /*#__PURE__*/React.createElement("td", null, empleado.PERSONA), /*#__PURE__*/React.createElement("td", null, empleado.PUESTO));
-  }))), /*#__PURE__*/React.createElement(Link, {
+  }))), /*#__PURE__*/React.createElement("hr", null), /*#__PURE__*/React.createElement(Link, {
     to: "/ver-departamento/".concat(id, "/nuevo-empleado")
-  }, "Nuevo Empleado"), " | ", /*#__PURE__*/React.createElement(Link, {
+  }, /*#__PURE__*/React.createElement("button", {
+    className: "btn btn-success"
+  }, "Nuevo Empleado")), " | ", /*#__PURE__*/React.createElement(Link, {
     to: "/"
-  }, "Volver"));
+  }, /*#__PURE__*/React.createElement("button", {
+    className: "btn btn-success"
+  }, "Volver"))));
 };
 module.exports = VerDepartamentoPage;
 

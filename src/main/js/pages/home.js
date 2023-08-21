@@ -25,38 +25,38 @@ class PageHome extends React.Component {
 
 				<div id='Contenedor' style={{ width: '50%', margin: '0 auto', display: 'flex', flexDirection: 'column' }}>
 					<div style={{ width: '100%' }}>
-					<Titulo entidad="Puestos" />
-					<PuestoList puestos={this.state.puestos} />
-					<br />
-					<Link to="/nuevo-puesto">
-						<button className="btn btn-success">
-						Nuevo Puesto
-						</button>
-					</Link>
-					</div>
-
-					<div style={{ width: '100%', display: 'flex' }}>
-					<div style={{ width: '50%' }}>
-						<Titulo entidad="Personas" />
-						<PersonaList personas={this.state.personas} />
+						<Titulo entidad="Puestos" />
+						<PuestoList puestos={this.state.puestos} />
 						<br />
-						<Link to="/nueva-persona">
-						<button className="btn btn-success">
-							Nuevo Persona
-						</button>
+						<Link to="/nuevo-puesto">
+							<button className="btn btn-success">
+							Nuevo Puesto
+							</button>
 						</Link>
 					</div>
 
-					<div style={{ width: '50%' }}>
-						<Titulo entidad="Departamentos" />
-						<DepartamentoList departamentos={this.state.departamentos} />
-						<br />
-						<Link to="/nuevo-departamento">
-						<button className="btn btn-success">
-							Nuevo Departamento
-						</button>
-						</Link>
-					</div>
+					<div style={{ width: '100%', display: 'flex' , paddingBottom: '50px'}}>
+						<div style={{ width: '50%' }}>
+							<Titulo entidad="Personas" />
+							<PersonaList personas={this.state.personas} />
+							<br />
+							<Link to="/nueva-persona">
+							<button className="btn btn-success">
+								Nuevo Persona
+							</button>
+							</Link>
+						</div>
+
+						<div style={{ width: '50%' }}>
+							<Titulo entidad="Departamentos" />
+							<DepartamentoList departamentos={this.state.departamentos} />
+							<br />
+							<Link to="/nuevo-departamento">
+							<button className="btn btn-success">
+								Nuevo Departamento
+							</button>
+							</Link>
+						</div>
 					</div>
 				</div>
 			</>

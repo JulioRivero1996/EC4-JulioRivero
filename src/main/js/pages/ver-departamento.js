@@ -29,40 +29,48 @@ const VerDepartamentoPage = ()=>{
     return (
         <>
             <h1>Ver Departamento</h1>
+            <div id='Contenedor' style={{ width: '50%', margin: '0 auto'}}>
 
-            <table border="1">
-                <tbody>
-                    <tr>
-                        <th>Nombre</th>
-                        <td>{departamento.nombre}</td>
-                    </tr>
-                </tbody>
-            </table>
+                <hr />
 
-            <hr />
+                <table border="1">
+                    <tbody style={{ backgroundColor: 'white' }}>
+                        <tr>
+                            <th style={{ color: 'white', backgroundColor: 'black' }}>Nombre</th>
+                            <td>{departamento.nombre}</td>
+                        </tr>
+                    </tbody>
+                </table>
 
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th colSpan="2">Empleados</th>  
-                    </tr>
-                    <tr>
-                        <th>Persona</th>
-                        <th>Puesto</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {empleados.map(empleado => {
-                        return (
-                            <tr key={empleado.ID}>
-                                <td>{empleado.PERSONA}</td>
-                                <td>{empleado.PUESTO}</td>
-                            </tr>
-                        );
-                    })}
-                </tbody>
-            </table>
-            <Link to={`/ver-departamento/${id}/nuevo-empleado`}>Nuevo Empleado</Link> | <Link to="/">Volver</Link>
+                <hr />
+
+                <table border="1">
+                    <thead style={{ color: 'white', backgroundColor: 'black' }}>
+                        <tr>
+                            <th colSpan="2" >Empleados</th>  
+                        </tr>
+                        <tr>
+                            <th>Persona</th>
+                            <th>Puesto</th>
+                        </tr>
+                    </thead>
+                    <tbody style={{ backgroundColor: 'white' }}>
+                        {empleados.map(empleado => {
+                            return (
+                                <tr key={empleado.ID}>
+                                    <td>{empleado.PERSONA}</td>
+                                    <td>{empleado.PUESTO}</td>
+                                </tr>
+                            );
+                        })}
+                    </tbody>
+                </table>
+
+                <hr />
+
+                <Link to={`/ver-departamento/${id}/nuevo-empleado`}><button className="btn btn-success">Nuevo Empleado</button></Link> | <Link to="/"><button className="btn btn-success">Volver</button></Link>
+            </div>
+            
         </>
     );
 }
